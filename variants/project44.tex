@@ -1,0 +1,102 @@
+%-------------------------
+% Eric Spencer -- one-page resume tuned for project44 (Forward Deployed Engineer).
+% Built to resume-project44.pdf, served at ericspencer.us/resume/project44
+%-------------------------
+\documentclass[letterpaper,10pt]{article}
+\input{preamble}
+
+\begin{document}
+\resumeHeading
+
+%-----------EXPERIENCE-----------
+\section*{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Member of Technical Staff}{Jun 2026 -- Present}
+    {HorneSci}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Forward-deployed role covering both sides of the sale: run technical discovery with prospective customers, scope Hierarchical Sparse Transform (HST) against their existing telemetry stack, then implement and deliver the integration myself.}
+      \resumeItem{Integrate HST into customer systems spanning C++, JVM/Java services, and Python, with Kafka-based event pipelines feeding compressed delta signal to downstream consumers.}
+      \resumeItem{Package each engagement as a reusable library the customer's own engineers can maintain, then own the ongoing relationship, support, and licensing terms.}
+      \resumeItem{Requirements extraction is the hard part, not the code --- translate operator-level problems into implementation specs and feed field observations back into the roadmap. Shipped an internal Discord agent for the team, unprompted, serving the company knowledge base over chat.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Undergraduate Researcher}{Aug 2025 -- Present}
+    {AI4FM at Loyola University Chicago}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Build and debug agentic LLM pipelines that invoke external tools (SANY parser, TLC model checker), read their failures, and self-correct --- tracing wrong outputs back to the specific context, tool call, or data point that caused them.}
+      \resumeItem{First systematic evaluation of LLM-generated TLA+ specifications for distributed and concurrent systems; co-author on a paper accepted to ICSOFT 2026 and released \texttt{chattla-20b} publicly (13{,}500+ downloads).}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineering Intern}{May 2025 -- Aug 2025}
+    {CCC Intelligent Solutions}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Shipped full-stack changes to a B2B claims portal used by enterprise insurance carriers, working across Vue.js and Spring Boot services.}
+      \resumeItem{Built an interactive claims dashboard surfacing real-time operational data for analysts.}
+      \resumeItem{Wrote detailed pull requests and performed QA verification inside an existing CI/CD pipeline.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {ITS Service Desk Technician}{Jul 2024 -- May 2026}
+    {Loyola University Chicago}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Resolved 50+ tickets weekly for non-technical users --- two years of translating technical complexity to people who do not care how it works, only whether it does.}
+      \resumeItem{Provisioned secure access via Azure AD and escalated incidents to backend infrastructure teams, tracing failures across systems I did not own.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineering Intern}{Jan 2025 -- May 2025}
+    {EpiFinder Medical Solutions}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Automated HR data and permissions workflows with Google Apps Script, processing 400+ email-based access requests in seconds and cutting manual handling by 99\%.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section*{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{
+    \item{
+      \textbf{Integration \& Events:} REST and API-first design, bi-directional webhooks, Kafka, event-driven pipelines, stream processing, PostgreSQL \\
+      \textbf{Languages:} Python, Java, C++, C, TypeScript/JavaScript, Swift \\
+      \textbf{Infrastructure:} Docker, Kubernetes, CI/CD, Cloudflare Workers, Azure AD, Git \\
+      \textbf{AI Systems:} agentic workflows, context engineering, tool invocation, stateful agents, evaluation harnesses, LoRA fine-tuning, formal verification (TLA+)
+    }
+  }
+\end{itemize}
+
+%-----------PROJECTS-----------
+\section*{Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+  {\textbf{TLA+ Generator} $|$ \emph{Python, LLM agents, tool invocation} $|$ \underline{tla.ericspencer.us}}{}
+  \resumeItemListStart
+      \resumeItem{Plain English in, model-checked TLA+ out: an agent loop that calls the SANY parser and TLC model checker as tools, reads their errors, and rewrites its own output until parsing, model checking, and the stated invariant all pass.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section*{Publications \& Releases}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{
+    \item{\textbf{\emph{TLA+-Bench: An Execution-Grounded Benchmark for Natural-Language to TLA+ Generation}} --- arXiv:2607.23425. \\
+    \textbf{\emph{TLA-Prover: Verifiable TLA+ Specification Synthesis via Preference-Optimized LoRA}} --- arXiv:2606.06133 (first author). \\
+    \textbf{\emph{Can LLMs Write Correct TLA+ Specifications?}} --- arXiv:2606.05792, accepted at ICSOFT 2026 (Porto). \\
+    \textbf{\texttt{chattla-20b}} --- 20.9B-parameter open model on Hugging Face, 13{,}500+ downloads.}
+  }
+\end{itemize}
+
+%-----------EDUCATION-----------
+\section*{Education}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{
+    \item{\textbf{Loyola University Chicago} --- B.S. Computer Science, Minor in Information Systems, May 2026. \\
+    Dean's List \textbar{} Mulcahy Scholar \textbar{} Presidential Scholarship}
+  }
+\end{itemize}
+
+\end{document}

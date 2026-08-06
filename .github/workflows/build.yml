@@ -1,0 +1,73 @@
+name: Build PDFs and publish to ericspencer.us
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-base texlive-latex-extra texlive-fonts-recommended
+
+      - name: Build CV
+        run: |
+          mkdir -p out
+          pdflatex -interaction=nonstopmode -halt-on-error -output-directory=out cv.tex
+          pdflatex -interaction=nonstopmode -halt-on-error -output-directory=out cv.tex
+
+      # Every variants/<name>.tex becomes out/resume-<name>.pdf, served at
+      # ericspencer.us/resume/<name>. Adding a variant means adding one file.
+      - name: Build variants
+        run: |
+          for f in variants/*.tex; do
+            name=$(basename "$f" .tex)
+            cp "$f" "build-$name.tex"
+            pdflatex -interaction=nonstopmode -halt-on-error -output-directory=out "build-$name.tex"
+            pdflatex -interaction=nonstopmode -halt-on-error -output-directory=out "build-$name.tex"
+            mv "out/build-$name.pdf" "out/resume-$name.pdf"
+          done
+          ls -la out/*.pdf
+
+      - name: Fail if any resume variant is longer than one page
+        run: |
+          sudo apt-get install -y --no-install-recommends poppler-utils
+          fail=0
+          for p in out/resume-*.pdf; do
+            pages=$(pdfinfo "$p" | awk '/^Pages:/{print $2}')
+            echo "$p -> $pages page(s)"
+            [ "$pages" -gt 1 ] && { echo "::error::$p is $pages pages, must be 1"; fail=1; }
+          done
+          exit $fail
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pdfs
+          path: out/*.pdf
+
+      - uses: webfactory/ssh-agent@v0.9.0
+        if: github.ref == 'refs/heads/main'
+        with:
+          ssh-private-key: ${{ secrets.SITE_DEPLOY_SSH_KEY }}
+
+      - name: Publish PDFs into the site repo
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git clone --depth 1 git@github.com:EricSpencer00/EricSpencer00.github.io.git site
+          mkdir -p site/assets/pdf
+          cp out/*.pdf site/assets/pdf/
+          cd site
+          git add assets/pdf
+          git diff --cached --quiet && { echo "No PDF changes."; exit 0; }
+          git commit -m "chore: rebuild resume PDFs from EricSpencer00/resume@${GITHUB_SHA::7}"
+          git push origin HEAD:main

@@ -1,0 +1,174 @@
+%-------------------------
+% Eric Spencer — full CV (everything). Built to cv.pdf, served at ericspencer.us/cv
+%-------------------------
+\documentclass[letterpaper,10pt]{article}
+\input{preamble}
+
+\begin{document}
+\resumeHeading
+
+%-----------EXPERIENCE-----------
+\section*{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Member of Technical Staff}{Jun 2026 -- Present}
+    {HorneSci}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Forward-deployed role spanning sales engineering and delivery: run technical discovery with prospective customers, scope Hierarchical Sparse Transform (HST) against their existing telemetry stack, then implement and hand off the integration.}
+      \resumeItem{Integrate HST into customer systems across C++, JVM/Java services, and Python, with Kafka-based event pipelines carrying compressed delta signal to downstream consumers.}
+      \resumeItem{Package each engagement as a reusable library the customer's own engineers maintain; own the ongoing relationship, support, and licensing terms.}
+      \resumeItem{Built and shipped an internal Discord agent serving the company knowledge base over chat.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Chief Executive Officer}{May 2026 -- Present}
+    {FROM AMERICA LLC}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Umbrella entity for independent software ventures; responsible for formation, licensing, product direction, and shipping across the portfolio.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Undergraduate Researcher}{Aug 2025 -- Present}
+    {AI4FM / FMitF, Loyola University Chicago}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Build and debug agentic LLM pipelines that invoke external tools (SANY parser, TLC model checker), read their failures, and self-correct --- tracing wrong outputs back to the specific context, tool call, or data point responsible.}
+      \resumeItem{Co-author on the first systematic evaluation of LLM-generated TLA+ specifications for distributed and concurrent systems; three arXiv papers and an ICSOFT 2026 acceptance.}
+      \resumeItem{Fine-tuned and released \texttt{chattla-20b}, a 20.9B-parameter open model on Hugging Face (13{,}500+ downloads), with Transformers, GGUF, and Ollama inference paths.}
+      \resumeItem{Curated \texttt{tla-w4-diamond-gold}, a verifier-gated TLA+ SFT corpus of 5{,}010 examples surviving the W4 diamond-gold filter.}
+      \resumeItem{Design and maintain the lab's public-facing website and visual identity.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Founder}{Dec 2025 -- Jun 2026}
+    {instxnt.xyz (sunset)}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Built an e-commerce platform generating storefront websites automatically; served auth, cache, database, and subdomain routing across multiple TLDs.}
+      \resumeItem{Integrated webhook APIs from Stripe, Google, Apple, and Anthropic in TypeScript; shipped an MCP server exposing storefront creation to Claude, ChatGPT, and Gemini.}
+      \resumeItem{Ran CI/CD for frontend and Cloudflare Workers backends off GitHub branches, with containerized production and development environments.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineering Intern}{May 2025 -- Aug 2025}
+    {CCC Intelligent Solutions}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Shipped full-stack changes to a B2B claims portal used by enterprise insurance carriers, across Vue.js and Spring Boot services.}
+      \resumeItem{Built an interactive claims dashboard surfacing real-time operational data for analysts.}
+      \resumeItem{Wrote detailed pull requests and performed QA verification inside an existing CI/CD pipeline.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineer}{May 2025}
+    {Loyola University Chicago, Department of Computer Science}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Developed a Spring Boot and Vaadin microwave simulator demonstrating TLA+ formal verification in action; concept to deployed web app in two weeks.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineering Intern}{Jan 2025 -- May 2025}
+    {EpiFinder Medical Solutions}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Automated HR data and permissions workflows with Google Apps Script, cutting manual handling by 99\%.}
+      \resumeItem{Engineered an automated system processing 400+ email-based access requests in seconds.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {ITS Service Desk Technician}{Jul 2024 -- May 2026}
+    {Loyola University Chicago}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Resolved 50+ tickets weekly for non-technical users across students, faculty, and staff.}
+      \resumeItem{Provisioned secure access via Azure AD and business intelligence tooling; escalated and traced incidents with backend infrastructure teams.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Undergraduate Research Assistant}{Apr 2023 -- Aug 2023}
+    {Loyola University Chicago}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Researched model interpretability by analyzing LLM comprehension of advanced Java concepts; co-authored documentation and experimental design for publication.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section*{Publications}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{
+    \item{A.~Bisharat, \textbf{E.~Spencer}, B.~Ortiz, K.~Bhadauria, M.~Nazari, B.~Santos, A.~Ramos, T.~Wang, G.~K.~Thiruvathukal, K.~L\"aufer, M.~Abuhamad. \emph{TLA+-Bench: An Execution-Grounded Benchmark and Dataset for Natural-Language to TLA+ Specification Generation.} arXiv:2607.23425, 2026. \vspace{2pt}}
+    \item{\textbf{E.~Spencer}, A.~Bisharat, B.~Ortiz, K.~Bhadauria, M.~Nazari, T.~Wang, G.~K.~Thiruvathukal, K.~L\"aufer, M.~Abuhamad. \emph{TLA-Prover: Verifiable TLA+ Specification Synthesis via Preference-Optimized Low-Rank Adaptation.} arXiv:2606.06133, 2026. \vspace{2pt}}
+    \item{A.~Bisharat, B.~Ortiz, \textbf{E.~Spencer}, K.~Bhadauria, T.~Wang, G.~K.~Thiruvathukal, K.~L\"aufer, M.~Abuhamad. \emph{Can LLMs Write Correct TLA+ Specifications? Evaluating Natural-Language-to-TLA+ Generation.} arXiv:2606.05792, 2026. Accepted, \textbf{ICSOFT 2026} (Porto).}
+  }
+\end{itemize}
+
+%-----------RELEASES-----------
+\section*{Open-Source Releases}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{
+    \item{\textbf{\texttt{chattla-20b}} --- 20.9B-parameter TLA+ specification model, Hugging Face, 13{,}500+ downloads. \\
+    \textbf{\texttt{tla-w4-diamond-gold}} --- verifier-gated TLA+ SFT corpus, 5{,}010 examples. \\
+    \textbf{FormaLLM} --- toolkit for evaluating LLMs on formal-specification synthesis.}
+  }
+\end{itemize}
+
+%-----------PROJECTS-----------
+\section*{Selected Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+  {\textbf{TLA+ Generator} $|$ \emph{Python, agentic LLM tooling} $|$ \underline{tla.ericspencer.us}}{}
+  \resumeItemListStart
+      \resumeItem{Plain English in, model-checked TLA+ out: an agent loop that calls the SANY parser and TLC model checker as tools, reads their errors, and rewrites its own output until parsing, model checking, and the stated invariant all pass.}
+  \resumeItemListEnd
+
+\resumeProjectHeading
+  {\textbf{Resilient} $|$ \emph{Compiler, systems}}{}
+  \resumeItemListStart
+      \resumeItem{Statically-typed compiled language targeting safety-critical embedded systems.}
+  \resumeItemListEnd
+
+\resumeProjectHeading
+  {\textbf{paper-digest} $|$ \emph{Cloudflare Workers, LLM ranking} $|$ \underline{paper-digest.ericspencer.us}}{}
+  \resumeItemListStart
+      \resumeItem{Daily pipeline ranking new arXiv submissions against plain-English interests, with a keyword fallback so the API degrades instead of failing.}
+  \resumeItemListEnd
+
+\resumeProjectHeading
+  {\textbf{Stemacle} $|$ \emph{Swift, macOS/iOS, web} $|$ \underline{stemacle.com}}{}
+  \resumeItemListStart
+      \resumeItem{Audio stem separation shipped as a web app, macOS downloads, and an iOS build.}
+  \resumeItemListEnd
+
+\resumeProjectHeading
+  {\textbf{AuraOS} $|$ \emph{LLM systems}}{}
+  \resumeItemListStart
+      \resumeItem{Experimental LLM-driven operating-shell concept.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section*{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{
+    \item{
+      \textbf{Languages:} Python, Java, C++, C, TypeScript/JavaScript, Swift, Rust, TLA+ \\
+      \textbf{Integration \& Events:} REST and API-first design, bi-directional webhooks, Kafka, event-driven pipelines, stream processing, PostgreSQL \\
+      \textbf{Frameworks:} Spring Boot, Vue.js, React, Next.js, Vaadin, Flask, SwiftUI \\
+      \textbf{Infrastructure:} Docker, Kubernetes, CI/CD, Cloudflare Workers, Azure AD, Git, GitHub Actions \\
+      \textbf{AI Systems:} agentic workflows, context engineering, tool invocation, stateful agents, evaluation harnesses, LoRA/SFT fine-tuning, PyTorch, Hugging Face \\
+      \textbf{Formal Methods:} TLA+, TLC model checking, SANY, trace validation
+    }
+  }
+\end{itemize}
+
+%-----------EDUCATION-----------
+\section*{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Loyola University Chicago}{Chicago, IL}
+    {B.S. Computer Science, Minor in Information Systems}{Completed May 2026}
+    \resumeItemListStart
+      \resumeItem{Dean's List \textbar{} Mulcahy Scholar (LLM-based TLA+ research stipend, 2025) \textbar{} Presidential Scholarship}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
