@@ -7,14 +7,19 @@ they are served from:
 | URL | File |
 | --- | --- |
 | `ericspencer.us/cv` | `cv.tex` — the full CV. Everything: all roles, all publications, all projects. No length limit. |
-| `ericspencer.us/resume/project44` | `variants/project44.tex` — one page, tuned for a Forward Deployed Engineer role. |
+| `ericspencer.us/resume/80626` | `variants/80626.tex` — one page, tuned. |
 
 ## Adding a tuned resume
 
-1. Copy an existing variant: `cp variants/project44.tex variants/acme.tex`
+Variants are named by the date they were written, never by the company or role
+they target — the URL gets sent to strangers, so it should say nothing about who
+it was sent to. Format is `M` + `DD` + `YY`: August 6, 2026 is `80626`. A second
+one the same day appends a counter: `806261`.
+
+1. Copy an existing variant: `cp variants/80626.tex variants/80726.tex`
 2. Edit it. Keep it to one page — CI fails the build otherwise.
-3. Push to `main`. It appears at `ericspencer.us/resume/acme` once the site's
-   landing page for it is added (see `SETUP.md`).
+3. Add the matching row to `content/resumes.txt` in the site repo.
+4. Push to `main`.
 
 ## Layout
 
@@ -31,5 +36,5 @@ pdflatex cv.tex
 Variants use `\input{preamble}`, so compile them from the repo root:
 
 ```bash
-pdflatex -jobname resume-project44 variants/project44.tex
+pdflatex -jobname resume-80626 variants/80626.tex
 ```
