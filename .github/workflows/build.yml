@@ -47,6 +47,9 @@ jobs:
           done
           exit $fail
 
+      - name: Test PDF artifact synchronization
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
+
       - uses: actions/upload-artifact@v4
         with:
           name: pdfs
@@ -64,8 +67,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           git clone --depth 1 git@github.com:EricSpencer00/EricSpencer00.github.io.git site
-          mkdir -p site/assets/pdf
-          cp out/*.pdf site/assets/pdf/
+          python3 scripts/sync_pdfs.py out site/assets/pdf
           cd site
           git add assets/pdf
           git diff --cached --quiet && { echo "No PDF changes."; exit 0; }
