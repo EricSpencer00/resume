@@ -1,0 +1,95 @@
+% Eric Spencer -- one-page resume, November 1, 2026, fourth edition.
+% Original resume design and shared macros; dated edition is pinned after review.
+\documentclass[letterpaper,11pt]{article}
+\input{preamble}
+
+% Keep the original centered heading and underlined contact treatment.
+\renewcommand{\resumeHeading}{%
+\begin{center}
+    {\Huge \scshape Eric Spencer} \\ \vspace{2pt}
+    \small Chicago, IL $|$
+    \href{tel:+16307965368}{\underline{(630) 796-5368}} $|$
+    \href{mailto:eric@ericspencer.us}{\underline{eric@ericspencer.us}} $|$
+    \href{https://ericspencer.us/resume}{\underline{ericspencer.us/resume}} $|$
+    \href{https://linkedin.com/in/ericspencer00}{\underline{linkedin.com/in/ericspencer00}}
+\end{center}
+}
+
+\setlength{\parskip}{1pt}
+\setlist[itemize]{itemsep=3pt}
+\begin{document}
+\resumeHeading
+
+\section*{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Member of Technical Staff}{Jun 2026 -- Present}
+    {HorneSci}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Work with customers to understand requirements and build integrations in Python, Java, and C++.}
+      \resumeItem{Integrate HST with existing services and Kafka pipelines; document the work for customer engineers.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {ITS Service Desk Technician}{Jul 2024 -- May 2026}
+    {Loyola University Chicago}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Provisioned secure access with Azure AD and business intelligence tools for students, faculty, and staff.}
+      \resumeItem{Resolved 50+ tickets weekly; traced incidents and coordinated escalation with infrastructure teams.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Researcher}{Aug 2025 -- Present}
+    {AI4FM at Loyola University Chicago}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Build AI pipelines that invoke SANY and TLC, trace failures, and validate TLA+ specifications for distributed systems.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineering Intern}{May 2025 -- Aug 2025}
+    {CCC Intelligent Solutions}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Delivered Vue.js and Spring Boot changes to an enterprise insurance claims portal, with operational dashboards and QA verification in CI/CD.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineering Intern}{Jan 2025 -- May 2025}
+    {EpiFinder Medical Solutions}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Automated HR data and permissions workflows with Google Apps Script.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section*{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Cloud \& Identity:} Microsoft Azure, Azure AD / Microsoft Entra ID, access provisioning \\
+    \textbf{Languages \& Tools:} Python, Java, C++, TypeScript, SQL, Git, Docker, CI/CD, Kafka \\
+    \textbf{Formal Methods:} TLA+, TLC model checking, SANY
+  }}
+\end{itemize}
+
+\section*{Publications}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \href{https://doi.org/10.5220/0015234600004088}{\textbf{\emph{TLA-Prover: Verifiable TLA+ Specification Synthesis via Preference-Optimized Low-Rank Adaptation}}} --- first author, ICSOFT 2026, pp. 627--636. \\
+    \href{https://doi.org/10.5220/0015070400004088}{\textbf{\emph{Can LLMs Write Correct TLA+ Specifications?}}} --- coauthor, ICSOFT 2026, pp. 39--50. \\
+    \href{https://arxiv.org/abs/2607.23425}{\textbf{\emph{TLA+-Bench: An Execution-Grounded Benchmark and Dataset for Natural-Language to TLA+ Specification Generation}}} --- coauthor, arXiv:2607.23425, 2026. \\
+    \href{https://arxiv.org/abs/2610.19489}{\textbf{\emph{How the Dirty Set Moves: Characterizing Schedule Reuse in Incremental Sparse Matrix Multiplication}}} --- coauthor, systems preprint, arXiv:2610.19489, 2026.
+  }}
+\end{itemize}
+
+\section*{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {University of Illinois Urbana-Champaign}{Incoming}
+    {Master of Computer Science}{}
+  \resumeSubheading
+    {Loyola University Chicago}{May 2026}
+    {B.S. Computer Science, Minor in Information Systems}{Chicago, IL}
+    \resumeItemListStart
+      \resumeItem{Dean's List \textbar{} Mulcahy Scholar \textbar{} Presidential Scholarship}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
