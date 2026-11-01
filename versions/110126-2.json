@@ -1,0 +1,20 @@
+{
+  "version": "110126-2",
+  "date": "2026-11-01",
+  "source": "variants/110126-2.tex",
+  "source_sha256": "3fd10414e599fb8a841e4f4d27e132a1c072f2148a806e0559bff1cdc17b2164",
+  "reviewed_pdf_sha256": "a272f295cb7d4de7bc49016aaf53e4b68ec847da83a11082f821c3a8cfe5019d",
+  "pages": 1,
+  "visual_review": "passed",
+  "design_reference": "variants/81326.tex and shared preamble.tex",
+  "preview_build": "https://github.com/EricSpencer00/resume/actions/runs/41333081972",
+  "public_url": "https://ericspencer.us/resume/110126-2/",
+  "pdf_url": "https://ericspencer.us/assets/pdf/resume-110126-2.pdf",
+  "tag": "resume-110126-2",
+  "content_notes": [
+    "Original design retained",
+    "Prototype section removed",
+    "Speculative migration-planning skills removed",
+    "Incoming UIUC masters entry supplied by Eric; field and date not inferred"
+  ]
+}
