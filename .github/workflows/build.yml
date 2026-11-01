@@ -65,7 +65,17 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           git clone --depth 1 git@github.com:EricSpencer00/EricSpencer00.github.io.git site
           mkdir -p site/assets/pdf
-          cp out/*.pdf site/assets/pdf/
+          cp out/cv.pdf site/assets/pdf/cv.pdf
+          # Date-pinned editions are immutable once published. A revision gets
+          # a new date/counter rather than changing an already-shared PDF.
+          for pdf in out/resume-*.pdf; do
+            destination="site/assets/pdf/$(basename "$pdf")"
+            if [ -e "$destination" ]; then
+              echo "Preserving published edition: $(basename "$pdf")"
+            else
+              cp "$pdf" "$destination"
+            fi
+          done
           cd site
           git add assets/pdf
           git diff --cached --quiet && { echo "No PDF changes."; exit 0; }

@@ -1,0 +1,75 @@
+% Eric Spencer one-page resume. Date-pinned edition; do not overwrite after publication.
+\documentclass[letterpaper,10pt]{article}
+\usepackage[letterpaper,top=0.45in,bottom=0.5in,left=0.65in,right=0.65in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\raggedright
+\raggedbottom
+\titleformat{\section}{\fontsize{11}{12}\selectfont\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+\setlist[itemize]{leftmargin=0.15in,labelsep=0.05in,itemsep=1pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+\newcommand{\role}[3]{\vspace{3pt}\textbf{#1} $|$ \textbf{#2}\hfill{\fontsize{9}{10}\selectfont #3}\par\nopagebreak}
+\hypersetup{pdftitle={Eric Spencer Resume},pdfauthor={Eric Spencer}}
+\begin{document}
+\fontsize{10}{11.4}\selectfont
+
+{\fontsize{24}{27}\selectfont\bfseries Eric Spencer}\par
+{\fontsize{11}{13}\selectfont\bfseries Azure Migration and Integration Engineering}\par
+{\fontsize{9.2}{10.5}\selectfont Chicago, IL $|$ (630) 796-5368 $|$ \href{mailto:eric@ericspencer.us}{eric@ericspencer.us}}\par
+{\fontsize{9.2}{10.5}\selectfont \href{https://ericspencer.us/resume}{ericspencer.us/resume} $|$ \href{https://linkedin.com/in/ericspencer00}{linkedin.com/in/ericspencer00}}\par
+\vspace{3pt}HorneSci engineer with Azure identity provisioning, enterprise software delivery and IT service desk experience. Published research spans TLA+ verification and incremental sparse computing.\par
+\section*{Technical Skills}
+\textbf{Azure:} Microsoft Azure; Microsoft Entra ID (Azure AD); access provisioning; Resource Graph export analysis\par
+\textbf{Migration:} Tenant migration planning; inventory reconciliation; dependency mapping; rollback planning; acceptance evidence\par
+\textbf{Engineering:} Python; Java; C++; TypeScript; SQL; Git; Docker; CI/CD; Kafka; TLA+\par
+\section*{Experience}
+\role{HorneSci}{Member of Technical Staff}{Jun 2026 - Present}
+\begin{itemize}
+\item Run technical discovery, scope customer requirements and deliver reusable integrations across Python, Java and C++ systems.
+\item Integrate HST and Kafka event pipelines; document implementation and operational handoff.
+\end{itemize}
+\role{Loyola University Chicago}{ITS Service Desk Technician}{Jul 2024 - May 2026}
+\begin{itemize}
+\item Provisioned secure access with Azure AD and BI tools for students, faculty and staff.
+\item Resolved more than 50 support tickets weekly; traced incidents and coordinated escalation with infrastructure teams.
+\end{itemize}
+\role{AI4FM at Loyola University Chicago}{Researcher}{Aug 2025 - Present}
+\begin{itemize}
+\item Build AI pipelines that invoke SANY and TLC, trace failures and validate TLA+ specifications for distributed systems.
+\end{itemize}
+\role{CCC Intelligent Solutions}{Software Engineering Intern}{May 2025 - Aug 2025}
+\begin{itemize}
+\item Delivered Vue.js and Spring Boot changes for an enterprise insurance claims portal, including operational dashboards and QA verification within CI/CD.
+\end{itemize}
+\role{EpiFinder Medical Solutions}{Software Engineering Intern}{Jan 2025 - May 2025}
+\begin{itemize}
+\item Automated HR data and permissions workflows with Google Apps Script, processing more than 400 email-based access requests in seconds.
+\end{itemize}
+\section*{Selected Project}
+\role{Azure Migration Assurance}{HorneSci offline prototype}{Nov 2026}
+\begin{itemize}
+\item Built an offline prototype with dependency tracking, durable snapshots and selective revalidation; verified with 51 tests and 100 generated dependency graphs.
+\end{itemize}
+\section*{TLA and Systems Publications}
+\href{https://doi.org/10.5220/0015234600004088}{\textbf{TLA-Prover: Verifiable TLA+ Specification Synthesis via Preference-Optimized Low-Rank Adaptation.}} First author. ICSOFT 2026, pp. 627-636.\par
+\href{https://doi.org/10.5220/0015070400004088}{\textbf{Can LLMs Write Correct TLA+ Specifications? Evaluating Natural-Language-to-TLA+ Generation.}} Coauthor. ICSOFT 2026, pp. 39-50.\par
+\href{https://arxiv.org/abs/2607.23425}{\textbf{TLA+-Bench: An Execution-Grounded Benchmark and Dataset for Natural-Language to TLA+ Specification Generation.}} Coauthor. Preprint, arXiv:2607.23425, 2026.\par
+\href{https://arxiv.org/abs/2610.19489}{\textbf{How the Dirty Set Moves: Characterizing Schedule Reuse in Incremental Sparse Matrix Multiplication.}} Coauthor. Systems preprint, arXiv:2610.19489, 2026.\par
+\section*{Education}
+\textbf{Loyola University Chicago}\hfill May 2026\par
+B.S. Computer Science, Minor in Information Systems\par
+Dean's List; Mulcahy Scholar; Presidential Scholarship\par
+\fancyfoot[L]{\fontsize{8}{9}\selectfont\href{https://ericspencer.us/resume/110126}{ericspencer.us/resume/110126}}
+\end{document}
