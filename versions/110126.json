@@ -1,0 +1,13 @@
+{
+  "version": "110126",
+  "date": "2026-11-01",
+  "source": "variants/110126.tex",
+  "source_sha256": "f39dddf477402f16732a2c359cd201c2ac791a7de2e06c5cb2b20befa2a5eaa3",
+  "reviewed_pdf_sha256": "acb82718b513ed12ce7c71428732a8ab2f8855eb5236df7249f38121a2e2f825",
+  "pages": 1,
+  "visual_review": "passed",
+  "preview_build": "https://github.com/EricSpencer00/resume/actions/runs/41331969878",
+  "public_url": "https://ericspencer.us/resume/110126/",
+  "pdf_url": "https://ericspencer.us/assets/pdf/resume-110126.pdf",
+  "tag": "resume-110126"
+}

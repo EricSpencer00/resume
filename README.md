@@ -8,6 +8,13 @@ they are served from:
 | --- | --- |
 | `ericspencer.us/cv` | `cv.tex` — the full CV. Everything: all roles, all publications, all projects. No length limit. |
 | `ericspencer.us/resume/80626` | `variants/80626.tex` — one page, tuned. |
+| `ericspencer.us/resume/110126` | `variants/110126.tex` — one page, Azure, IT service desk, TLA+ and systems publications. |
+
+The current `/resume/` entry is explicitly pinned by `content/resume-current.txt`
+in `EricSpencer00/EricSpencer00.github.io`. Published dated PDFs are preserved by
+the publishing workflow; a revision must get a new dated/counter filename. The
+`resume-110126` Git tag records this edition, and `versions/110126.json` records
+the source and reviewed PDF hashes.
 
 ## Adding a tuned resume
 
